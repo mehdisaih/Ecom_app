@@ -11,7 +11,7 @@ import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import java.util.List;
 
 @SpringBootApplication
-public class    CustomerServicesApplication {
+public class  CustomerServicesApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(CustomerServicesApplication.class, args);
