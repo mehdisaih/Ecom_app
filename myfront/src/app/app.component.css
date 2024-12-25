@@ -1,0 +1,14 @@
+.nav-link {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-item {
+  list-style: none;
+}
+
