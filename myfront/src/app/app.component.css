@@ -1,14 +1,43 @@
-.nav-link {
-  color: blue;
-  text-decoration: none;
-  cursor: pointer;
+/* Supprimer les marges et paddings par défaut */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
+/* Navbar fixe en haut */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.nav-item {
-  list-style: none;
+/* S’assurer que le contenu commence directement sous la navbar */
+.home-page {
+  padding-top: 56px; /* Hauteur de la navbar */
+  background-color: #000000; /* Fond noir */
+  color: #ffffff; /* Texte blanc */
+  min-height: calc(100vh - 56px); /* Prend tout l'espace visible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Style général des cartes */
+.card {
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Texte clair et contrasté */
+.text-light {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}

@@ -1,22 +1,77 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/customers">Customers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/products">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/billing">Billing</a>
-      </li>
-    </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Dashboard</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/customers">Customers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/billing">Billing</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<router-outlet>
+<!-- Home Page Content -->
+<div class="home-page">
+  <div class="overlay">
+    <div class="container text-center mt-5">
+      <h1 class="mb-4 text-light">Welcome to Our Dashboard</h1>
+      <div class="row justify-content-center">
+        <!-- Card for Customers -->
+        <div class="col-md-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Customers</h5>
+              <p class="card-text">Manage your customers and view customer details.</p>
+              <a routerLink="/customers" class="btn btn-primary">Go to Customers</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card for Products -->
+        <div class="col-md-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Products</h5>
+              <p class="card-text">View and manage your product inventory.</p>
+              <a routerLink="/products" class="btn btn-primary">Go to Products</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card for Billing -->
+        <div class="col-md-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <h5 class="card-title">Billing</h5>
+              <p class="card-text">View and manage customer billing and invoices.</p>
+              <a routerLink="/billing" class="btn btn-primary">Go to Billing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-</router-outlet>
+<!-- Router Outlet -->
+<router-outlet></router-outlet>
